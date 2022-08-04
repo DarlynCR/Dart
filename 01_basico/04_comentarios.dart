@@ -16,7 +16,7 @@ main(){
         'Darlyn',
         'Bebé Barrigas'
         //Y aquí
-    ]
+    ];
 
 
     /* Este es un comentario

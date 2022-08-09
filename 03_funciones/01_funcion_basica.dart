@@ -44,9 +44,15 @@ main(){
 
   var nuevoListado = listado.where( (n) => n > 4 );
 
-  
-
   print( nuevoListado.toSet() );
+
+
+  //CALLBACKS --Función que se llama dentro de otra función
+
+  obtenetUsuario('100', (Map persona) {
+    print(persona);
+  });
+
 
 
 }
@@ -90,3 +96,17 @@ int sumar( int x, int y ) {
 }
 
 int sumarFlecha( int x, int y ) => x + y;
+
+
+//CALLBACK
+
+//Función que recibe como parámetro otra función
+void obtenetUsuario(String id,  Function callback ){
+
+  Map usuario = {
+      'id'     : id,
+      'nombre' : 'Sergio'
+  };
+
+  callback(usuario);
+}

@@ -3,6 +3,9 @@
 main(){
     //Operadores de asiganción
     int a = 10;
+    int? b;
+    b ??= 20; //si es nullo asignar el valo tal
+    print(b);
 
     //Elvis Operator 
     String resp = a > 25 ? 'a es mayor que 25' : 'a es menor que 25';

@@ -9,12 +9,14 @@ main(){
     //no es necesario usar var 
     //Si se usa, no se debe indicar el tipo de dato, dart lo infiere
     // sino se usa var si se debe indicar el tipo de dato
-    var  b = 20.0;
+    var  b = 20.0; //infiere
     //int x,y,z;
     int r = 10, y=20, z=30;
     print("Números en Dart");
     print(a);
 
+    int? c;
+    print(c);
     //Strings
     var name = 'Tony'; //Se recomienda usar esta comilla
     String name2 = "O'connor"; // O'connor -> comillas dobles escapa '
@@ -24,7 +26,11 @@ main(){
     Hola
     Mundo''';
 
-    String nulo;
+    //String nulo; -> dará error en ejecución
+    // String nulo = null, -> no deja, es obligatorio darle un valor así:
+    String? nulo = null; // o string? nulo, No da error en ejecución
+    late String nulo1;
+    nulo1 = 'Hola'; //El valor se asigna después
 
     print("String en Dart");
     print(multiline);
@@ -34,7 +40,7 @@ main(){
 
     var active = true;
     bool active2 = false;
-    bool run; // valor por defecto null
+    bool? run; // valor por defecto null
     active = !active; //niega el valor asignado
     print("Boolenos en Dart");
     print(active);

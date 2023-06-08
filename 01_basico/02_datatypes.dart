@@ -15,26 +15,37 @@ main(){
     print("Números en Dart");
     print(a);
 
-    int? c;
+    int? c; // declaración de valores nulos
     print(c);
+
     //Strings
     var name = 'Tony'; //Se recomienda usar esta comilla
-    String name2 = "O'connor"; // O'connor -> comillas dobles escapa '
+    String lastName = "O'connor"; // O'connor -> comillas dobles escapa '
+    String fullName = "$name $lastName";
+   
     //String multilinea
-
     String multiline = '''
     Hola
-    Mundo''';
+    Mundo $fullName''';
 
+    // (Uso del Null Safety)
     //String nulo; -> dará error en ejecución
     // String nulo = null, -> no deja, es obligatorio darle un valor así:
-    String? nulo = null; // o string? nulo, No da error en ejecución
-    late String nulo1;
-    nulo1 = 'Hola'; //El valor se asigna después
+    String? nulo = null; // o string? nulo, No da error en ejecución 
+     String? nulo1; 
+    late String nulo2;
+    nulo2 = 'Hola'; //El valor se asigna después
 
     print("String en Dart");
     print(multiline);
-    print(name2);
+    print(lastName);
+    print("Null Safety:");
+    print(nulo1);
+
+ 
+    //dynamic
+    var isActive; // No tiene forma de inferir 
+    // dynamic = cualquier tipo de dato, como any
     
     //Booleans
 
@@ -46,7 +57,7 @@ main(){
     print(active);
 
 
-    //Arrays
+    //Arrays - Listas 
 
     var personajes = ['Superman', 'Batman', 101]; 
 
@@ -62,13 +73,20 @@ main(){
     print("Listas en Dart");
     print(personajes);
 
-    //Sets
-
-    Set<String> villanos ={'Lex', 'Doom', 'Red Skull'};
-    villanos.add('Lex');//No admite valores duplicados
+    //Sets - Listas que NO admite valores duplicados
+    Set<String> villanos = {'Lex', 'Doom', 'Red Skull'};
+    villanos.add('Lex');
 
     print("Sets en Dart");
     print(villanos);
+
+    //Conversión de list a set para eliminar valores duplicados
+    personajes.addAll(['Mujer Maravilla', 'Flash']);
+    print("Lista con duplicados:");
+    print(personajes);
+
+    print("Lista sin duplicados:");
+    print(personajes.toSet());
 
 
     //Maps
@@ -89,7 +107,9 @@ main(){
         'activa' : false,
     }; //Admite cualquier tipo de dato en clave, valor
 
-    Map<String,dynamic> captian = new Map();
+    Map<String,dynamic> captian = new Map(); //crea un mapa vacio
+
+    print(captian);
 
     captian.addAll({'nombre':'Steve', 'poder':'Soportar suero sin morir'});
 

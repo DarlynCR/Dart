@@ -4,15 +4,16 @@ main(){
     //Operadores de asiganción
     int a = 10;
     int? b;
-    //b ??= 20; //si es nullo asignar el valo tal
+    //b ??= 20; //Asigna el valor únicamente su la variable es null
     int c = b ?? a; // asigne b, si b es null asigne a
     print('b: $b');
     print('c: $c');
 
-    //Elvis Operator 
+    //Elvis Operator en Kotlin --- Operador condicional ternario dart
     String resp = a > 25 ? 'a es mayor que 25' : 'a es menor que 25';
     print(resp);
-    //Valores relacionales - retornan valor booleano
+
+    //Operadores relacionales - retornan valor booleano
     // > Mayor que - < menor que - != - == - <= - >=
 
     String name = 'Sergio';
@@ -23,7 +24,7 @@ main(){
     print(name != name2);
 
 
-    //Operador de tipo
+    //Operador de tipo - valida el tipo de dato
     int i = 10; 
     String j = '10';
 

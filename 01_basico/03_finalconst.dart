@@ -4,7 +4,7 @@ main(){
     var a   = 10; 
     // Definición de variables que no cambiarán después de su definición
     final b = 20; // Una vez inicializada no se puede modificar su valor
-    const c = 30; //Crea el espacio de memoria en tiempo de compilación - sin métodos de lectura, ni para establecer sus valores
+    const c = 30; // Igual que final, pero se utiliza para definir una constante a nivel de compilación
     late final e; // Una vez inicializada no se puede modificar su valor
 
     //c = 50; No se puede reasignar porque es final

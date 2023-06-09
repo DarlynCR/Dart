@@ -3,9 +3,9 @@ import 'dart:io';
 main(){
 
     stdout.writeln('Cual es tu edad?');
-    String? age = stdin.readLineSync();
+    int? age = int.parse(stdin.readLineSync() ?? "0");
   
-    askAge(age);
+    //askAge(age);
     askAge2(age);
     
 
@@ -14,10 +14,10 @@ main(){
 
 }
 // if - else
-void askAge(String? age){
+void askAge(int? age){
 
  if (age != null){
-       if(int.parse(age) >= 18){
+       if(age >= 18){
         stdout.writeln('Eres mayor de edad');
        }else{
         stdout.writeln('No eres mayor de edad');}
@@ -25,16 +25,25 @@ void askAge(String? age){
 }
 
 // if - else if
-void askAge2(String? age){
+void askAge2(int? age){
 
   if (age != null){
-       if(int.parse(age) >= 21){
-        stdout.writeln('Ciudadano');
-       }else if(int.parse(age) >= 18){
-        stdout.writeln('Mayor de edad');
-       }else{
-        stdout.writeln('Menor de edad');
-       }
+
+      if (age < 18){
+          stdout.writeln('Menor de edad');
+      }else if(age >= 18 && age <= 20){
+          stdout.writeln('Mayor de edad');
+      }else{
+          stdout.writeln('Ciudadano');
+      }
+    
+      //  if(age >= 21){
+      //   stdout.writeln('Ciudadano');
+      //  }else if(age >= 18){
+      //   stdout.writeln('Mayor de edad');
+      //  }else{
+      //   stdout.writeln('Menor de edad');
+      //  }
     }
 }
 
